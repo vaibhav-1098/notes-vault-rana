@@ -16,7 +16,7 @@ const Navbar = () => {
             dispatch(authActions.logout());
             localStorage.clear();
             toast.warn("logged out", { autoClose: 1000, hideProgressBar: true });
-            navigate("/");
+            navigate("/login");
         } catch (error) {
             toast.warn("error logging out", { autoClose: 1000, hideProgressBar: true });
         }
@@ -56,7 +56,7 @@ const Navbar = () => {
                 )}
                 {isLogin && (
                     <div className="flex justify-center items-center gap-3 sm:gap-6">
-                        <div>
+                        <div className="sm:block hidden">
                             <i className="bi bi-person-circle"></i> <span className="text-sm">{Email}</span>
                         </div>
                         <button onClick={handleLogout} className="bg-amber-500 p-1 px-2 rounded-md">
