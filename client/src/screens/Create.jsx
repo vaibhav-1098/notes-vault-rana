@@ -95,7 +95,7 @@ const Create = () => {
                             placeholder="Description"
                             maxLength="300"
                             rows="8"
-                            onChange={(e) => setDescription(e.target.value.replace(/^\s+/, "").replace(/\s+$/g, ""))}
+                            onChange={(e) => setDescription(e.target.value)}
                             value={description}
                             required
                             disabled={loading}
